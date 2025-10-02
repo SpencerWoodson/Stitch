@@ -1,0 +1,20 @@
+project_name: "Stitch"
+welcome_message: "🧵 Welcome to Stitch — your integrated knowledge system."
+
+vault_dir: "/home/trade/Vault"
+
+models:
+  fast: "~/Stitch/models/Ministral-8B-Instruct-2410-Q6_K_L.gguf"
+  deep: "~/Stitch/models/Mixtral-8x7B-Instruct-v0.1.Q4_K_M.gguf"
+context_window: 4096
+embedding_model: "all-MiniLM-L6-v2"
+chunk_size: 500
+
+# Model runtime options
+gpu_offloading: true
+verbose_model_loading: false
+stream: true
+live_stream_output: true
+max_tokens_fast: 600
+max_tokens_deep: 1200
+auto_continue: true
