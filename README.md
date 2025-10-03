@@ -54,6 +54,7 @@ This project downloaded its models from HuggingFace using the following links
 
 Fast(recommended Q6_K_L):
 https://huggingface.co/bartowski/Ministral-8B-Instruct-2410-GGUF
+
 Deep (recommended Q4_K_M):
 https://huggingface.co/TheBloke/Mixtral-8x7B-v0.1-GGUF
 
@@ -95,6 +96,20 @@ MAIN_SCRIPT="$STITCH_PATH/scripts/main.py"
 
 # Pass all arguments to main.py
 "$VENV_PYTHON" "$MAIN_SCRIPT" "$@"
+```
+Weirdly I can't find where I added it to my path but it should be here in an ideal world. Then edit your shell config file:
+```bash
+nano ~/.bashrc
+```
+
+Then put 
+```bash 
+export PATH="$HOME/stitch:$PATH"
+``` 
+
+And reload your shell 
+```bash
+source ~/.bashrc
 ```
 
 #### 7. Run the project
